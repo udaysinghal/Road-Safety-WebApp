@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+    
+}
+
+header {
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+  
+.road {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #444, #222);
+    position: relative;
+    overflow: hidden;
+}
+  
+.stats {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: white;
+    font-size: 16px;
+}
+  
+.player {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+}
+
+canvas {
+    border: 2px solid black;
+    background-color: #a3d3e4;
+}
+
+#fullscreen-btn, #start-btn, #pause-btn, #totscore {
+    position: absolute;
+    top: 10px;
+    padding: 10px 20px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#fullscreen-btn {
+    right: 10px;
+}
+
+#start-btn {
+    left: 10px;
+}
+
+#pause-btn {
+    left: 120px;
+}
+
+#totscore {
+    align-self: center;
+}
+#info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.levels {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+  }
+  
+  .level {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 500px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .level.locked {
+    background-color: gray;
+    cursor: not-allowed;
+    position: relative;
+    margin-left: 100px;
+  }
+  
+  .level.locked:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+  }
+  
+  .level.locked:hover {
+    border: 2px solid red;
+  }
+  
+
+#hoverWarning {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#error-message {
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script> 
+</head>
+<body>
+    <header>
+        <h1>Driving School Simulator</h1>
+    </header>
+
+    <main>
+        <div class="game-container">
+            <div class="road">
+              <div class="stats">
+                <p>Speed: <span id="speed">0</span> km/h</p>
+                <p>Time Elapsed: <span id="time-elapsed">0</span>s</p>
+              </div>
+              <div class="player" id="player"></div>
+            </div>
+          </div>
+          
+        <div class="levels">
+            <div class="level" id="level1">Level 1</div>
+            <div class="level locked" id="level2" data-tooltip="You need 5 points in Level 1 to unlock Level 2">Level 2</div>
+            <div class="level locked" id="level3" data-tooltip="You need 5 points in Level 2 to unlock Level 3">Level 3</div>
+        </div>
+          
+        <div id="error-message" style="display: none; color: red; text-align: center; margin-top: 10px;">This level is locked!</div>
+
+        
+        
+        <section id="game-container">
+            <button id="fullscreen-btn">Go Fullscreen</button>
+            <button id="start-btn">Start</button>
+            <button id="pause-btn">Pause</button>
+            <canvas id="gameCanvas" width="800" height="500"></canvas>
+        </section>
+        <section id="totscore">
+            <p><strong>Total Score:</strong> <span id="score">0</span></p>
+        </section>
+    </main>
+
+    <footer id="info">
+        <p>&copy; 2025 Driving Simulator</p>
+    </footer>
+</body>
+</html>
