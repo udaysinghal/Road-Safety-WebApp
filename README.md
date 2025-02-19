@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# Road-Safety-WebApp
-=======
+
 <<<<<<< HEAD
 # Road-Safety-Webapp
 =======
