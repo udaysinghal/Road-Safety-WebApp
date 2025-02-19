@@ -33,8 +33,7 @@ Follow these steps to set up the project on your local machine:
    - Simply open `index.html`
    - OR use a local server if required (e.g., Live Server extension in VS Code)
 
-## 📷 Screenshots
-(Add relevant screenshots of the project here to showcase the UI.)
+
 
 ## 💡 Future Improvements
 - Add AI-based road safety predictions.
